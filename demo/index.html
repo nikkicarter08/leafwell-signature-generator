@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <title>Leafwell | Signature Generator</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
+  <style>a{color:inherit}</style>
+</head>
+<body>
+  <div id="top" class="container">
+    <div class="row mb-5">
+      <div class="col-md-6 m-auto mt-5 mb-5">
+        <div class="text-center">
+          <h1>Leafwell Signature Generator</h1>
+          <p class="lead">Dynamic email signature generator using Leafwell signature template</p>
+        </div>
+      </div>
+        <hr>
+    </div>
+    <div class="row align-items-start">
+      <nav class="col-md-2 sticky-md-top">
+        <ul class="nav">
+          <li class="nav-item"><a href="#signature" class="nav-link">Example</a></li>
+          <li><a href="#generator" class="nav-link">Generator</a></li>
+        </ul>
+      </nav>
+      <main class="col-md-9">
+        <section id="signature" class="row pb-5">
+          <header class="col-md-12 left-align">
+            <h2 class="dark-text">Example <a href="#top" class="btn">#back to top</a>
+              <hr>
+            </h2>
+          </header>
+          <section class="col-md-12">
+            <iframe src="./signature.html" frameborder="0" width="100%"></iframe>
+          </section>
+        </section>
+        <section id="generator" class="row pt-5 pb-5">
+          <header class="col-md-12 left-align">
+            <h2 class="dark-text">Generator <a href="#top" class="btn">#back to top</a>
+              <hr>
+            </h2>
+          </header>
+          <p>Use this form bellow to generate your sinature and then download it.</br>
+            The headshot needs to be hosted in an external source, like a public Google Drive, and use only it's url in the form.</br>
+            Once you download it, open <code>signature.html</code> in a browser and copy the signature into your email signature field.</p>
+          <div class="col-sm-6">
+            <form class="form js-signature-form">
+              <div class="form-floating m2b-2">
+                <input type="text" name="name" id="name" required class="form-control" />
+                <label for="form">Name *</label>
+              </div>
+              <p class="mb2"><small class="form-text"></small></p>
+              <div class="form-floating">
+                <input type="text" name="position" id="position" required class="form-control" />
+                <label for="endpoint">Position *</label>
+              </div>
+              <p class="mb2"><small class="form-text"></small></p>
+              <div class="form-floating">
+                <input type="text" name="photo" id="photo" required class="form-control" />
+                <label for="endpoint">Photo url *</label>
+              </div>
+              <p class="mb2"><small class="form-text"></small></p>
+              <button type="submit" class="btn btn-dark">Generate signature</button>
+            </form>
+          </div>
+          <div class="col-sm-6">
+            <iframe class="js-signature-result" frameborder="0" width="100%"></iframe>
+            <a href="#" class="lf-button mt-1 d-inline-block d-none js-signature-download" download="signature.html">Download Signature</a>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <script>
+    (function () {
+      LFSignature = window.LFSignature || (window.LFSignature = []);
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = './signature.js';
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    })();
+    LFSignature.push(['init']);
+  </script>
+</body>
+</html>

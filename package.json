@@ -1,0 +1,35 @@
+{
+  "name": "lf-signature",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack --config webpack.config.js",
+    "build:release": "./node_modules/.bin/webpack --config webpack.config.js --env.prod --mode production",
+    "start": "./node_modules/.bin/webpack-dev-server --open"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.32",
+    "@babel/preset-env": "^7.0.0-beta.32",
+    "autoprefixer": "^10.2.1",
+    "babel-loader": "^8.0.0-beta.0",
+    "copy-webpack-plugin": "^4.2.0",
+    "css-loader": "^5.0.1",
+    "file-loader": "^6.2.0",
+    "html-loader": "^1.3.2",
+    "node-sass": "^5.0.0",
+    "postcss-loader": "^4.1.0",
+    "sass-loader": "^10.1.1",
+    "style-loader": "^2.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@ungap/url-search-params": "^0.2.2"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not IE 11"
+  ]
+}

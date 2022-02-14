@@ -1,0 +1,146 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/placeholders.scss";
+
+.lf-form {
+  font-size: 14px;
+
+  input:not([type="submit"]),
+  select {
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 12px;
+    width: 100% !important;
+
+    &.error {
+      border-color: red;
+    }
+  }
+
+  .hs-form-field {
+    display: grid;
+    padding-bottom: 15px;
+  }
+
+  .hs-form-field:not(.hs_certificate_state) > label,
+  .hs-form-required {
+    @extend %screen-reader;
+  }
+
+  .hs_certificate_state > label {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .hs-field-desc {
+    font-size: 10px;
+    opacity: 0.5;
+    order: 998;
+  }
+
+  .hs-richtext {
+    color: #999;
+    padding-bottom: 15px;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+
+      &:hover {
+        color: #36dc90;
+        border: none;
+      }
+    }
+
+    p {
+      font-size: 12px;
+      margin: 0;
+    }
+  }
+
+  /*
+  Friend discount toggle
+  */
+  .inputs-list[data-reactid*="number_of_card_users"] {
+    border-radius: 4px;
+    display: flex;
+    list-style: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+    .hs-form-radio {
+      flex-basis: 0;
+      flex-grow: 1;
+      position: relative;
+
+      label {
+        width: 100%;
+      }
+
+      input {
+        cursor: pointer;
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+
+        + span {
+          @extend %button;
+
+          display: block;
+          font-size: 13px !important;
+          font-weight: bold;
+          text-align: center;
+        }
+
+        &:not(:checked) + span {
+          @extend %button;
+
+          background-color: #f5f4f5;
+          color: inherit;
+        }
+      }
+    }
+  }
+
+  /*
+  Submit
+  */
+  input[type="submit"] {
+    @extend %button;
+
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 15px;
+    width: auto;
+
+    @include screenLarge {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+
+  /*
+  Errors
+  */
+  .hs-error-msgs {
+    color: red;
+    font-size: 80%;
+    list-style: none;
+    order: 999;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/*
+  Open Button
+*/
+.lf-button {
+  @extend %button;
+}
