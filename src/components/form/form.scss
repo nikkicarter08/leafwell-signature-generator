@@ -1,5 +1,6 @@
 @import "../../styles/mixins.scss";
 @import "../../styles/placeholders.scss";
+@import 'tippy.js/dist/tippy.css';
 
 .lf-form {
   font-size: 14px;
@@ -143,4 +144,9 @@
 */
 .lf-button {
   @extend %button;
+
+  &-dark {
+    @extend .lf-button;
+    background-color: #212529;
+  }
 }

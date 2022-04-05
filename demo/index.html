@@ -43,9 +43,13 @@
               <hr>
             </h2>
           </header>
+
           <p>Use this form bellow to generate your sinature and then download it.</br>
             The headshot needs to be hosted in an external source, like a public Google Drive, and use only it's url in the form.</br>
-            Once you download it, open <code>signature.html</code> in a browser and copy the signature into your email signature field.</p>
+            If you're using Google Drive to host your Headshot you need you use the share link in <code>Anyone on the internet with this link can view</code> mode.</br>
+            Once you download it, open <code>signature.html</code> in a browser and copy the signature into your email signature field.</br>
+            You can also use the <code>Copy HTML</code> button to directly copy the raw HTML of your signature to paste it in your email provider.</p>
+
           <div class="col-sm-6">
             <form class="form js-signature-form">
               <div class="form-floating m2b-2">
@@ -68,8 +72,20 @@
           </div>
           <div class="col-sm-6">
             <iframe class="js-signature-result" frameborder="0" width="100%"></iframe>
-            <a href="#" class="lf-button mt-1 d-inline-block d-none js-signature-download" download="signature.html">Download Signature</a>
+            <div>
+              <a href="#" class="lf-button mt-1 d-inline-block d-none js-signature-download" download="signature.html">Download Signature</a>
+              <a href="#" class="lf-button-dark mt-1 d-inline-block d-none js-signature-copy">Copy HTML</a>
+            </div>
           </div>
+        </section>
+
+        <section class="js-code-section d-none overflow-auto">
+          <header class="col-md-12 left-align">
+            <h2 class="dark-text">Raw HTML <a href="#top" class="btn">#back to top</a>
+              <hr>
+            </h2>
+          </header>
+          <pre class="bg-light p-3 overflow-auto"><code class="js-code-container"></code></pre>
         </section>
       </main>
     </div>
