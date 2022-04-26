@@ -138,7 +138,7 @@ export default {
                     </tr>
                     <tr>
                       <td colspan="2">
-                        <font color="#000F00" face="Verdana" size="1" style="font-size: 12px;">
+                        <font color="#000F00" face="Verdana" size="1" style="font-size: 12px; white-space: nowrap;">
                           Unlocking the therapeutic potential of cannabis.
                         </font>
                       </td>
