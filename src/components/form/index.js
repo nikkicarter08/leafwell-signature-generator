@@ -120,7 +120,7 @@ export default {
                             </tr>
                             <tr>
                               <td>
-                                <font color="#909090" face="Verdana" size="1" style="font-size: 14px;">
+                                <font color="#909090" face="Verdana" size="1" style="font-size: 14px;  white-space: nowrap;">
                                   ${position}
                                 </font>
                               </td>
@@ -129,7 +129,7 @@ export default {
                         </table>
                       </td>
                       <td width="100"></td>
-                      <td>
+                      <td style="vertical-align: top;">
                         <img src="${window.location.origin}/assets/logo.gif" alt="Leafwell" width="138">
                       </td>
                     </tr>
