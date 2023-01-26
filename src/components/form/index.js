@@ -159,20 +159,32 @@ export default {
                           <tbody>
                             <tr>
                               <td>
-                                <a href="https://www.facebook.com/Leafwell.co" target="_blank">
+                                <a href="https://www.facebook.com/leafwellofficial" target="_blank">
                                   <img src="${window.location.origin}/assets/fb.png" alt="Facebook">
                                 </a>
                               </td>
                               <td width="15"></td>
                               <td colspan="2">
-                                <a href="https://www.instagram.com/leafwell.co/" target="_blank">
+                                <a href="https://www.instagram.com/leafwell_official/" target="_blank">
                                   <img src="${window.location.origin}/assets/ig.png" alt="Instagram">
                                 </a>
                               </td>
                               <td width="15"></td>
                               <td colspan="2">
-                                <a href="https://www.linkedin.com/company/leafwell-co/" target="_blank">
+                                <a href="https://www.linkedin.com/company/leafwellofficial/" target="_blank">
                                   <img src="${window.location.origin}/assets/in.png" alt="LinkedIn">
+                                </a>
+                              </td>
+                              <td width="15"></td>
+                              <td colspan="2">
+                                <a href="https://twitter.com/_Leafwell_" target="_blank">
+                                  <img src="${window.location.origin}/assets/twitter.png" alt="Twitter">
+                                </a>
+                              </td>
+                              <td width="15"></td>
+                              <td colspan="2">
+                                <a href="https://www.youtube.com/@leafwell" target="_blank">
+                                  <img src="${window.location.origin}/assets/yt.png" alt="YouTube">
                                 </a>
                               </td>
                             </tr>
