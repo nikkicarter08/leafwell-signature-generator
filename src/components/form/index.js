@@ -192,9 +192,9 @@ export default {
                         </table>
                       </td>
                       <td style="text-align: right;">
-                        <a href="tel:+1(800)660-9085" target="_blank" style="text-decoration: none;">
+                        <a href="tel:+1(800)665-2870" target="_blank" style="text-decoration: none;">
                           <font color="#909090" face="Verdana" size="1" style="font-size: 12px;">
-                            +1 (800) 660-9085
+                            +1 (888) 665-2870
                           </font>
                         </a>
                       </td>
