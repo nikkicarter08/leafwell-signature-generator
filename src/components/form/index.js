@@ -21,6 +21,7 @@ export default {
         name: form.querySelector('input[name="name"]').value.trim(),
         position: form.querySelector('input[name="position"]').value.trim(),
         photo: _this.processPhotoUrl(form.querySelector('input[name="photo"]').value.trim()),
+        phone: form.querySelector('input[name="phone"]').value.trim(),
       };
 
       const signature = _this.loadSignature(params);
@@ -84,7 +85,7 @@ export default {
     return `data:text/html;charset=UTF-8,${encodeURIComponent(iframe.contentWindow.document.documentElement.outerHTML)}`;
   },
 
-  loadSignature: function ({name, position, photo}) {
+  loadSignature: function ({name, position, photo, phone}) {
     return `<!DOCTYPE html
   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" style="width: 522px !important; height: 100%;">
@@ -192,11 +193,11 @@ export default {
                         </table>
                       </td>
                       <td style="text-align: right;">
-                        <a href="tel:+1(800)660-9085" target="_blank" style="text-decoration: none;">
+                        ${phone ? `<a href="tel:${phone}" target="_blank" style="text-decoration: none;">
                           <font color="#909090" face="Verdana" size="1" style="font-size: 12px;">
-                            +1 (800) 660-9085
+                            ${phone}
                           </font>
-                        </a>
+                        </a>` : ''}
                       </td>
                     </tr>
                   </tbody>
